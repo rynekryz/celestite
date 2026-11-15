@@ -1,0 +1,12 @@
+<resources>
+    <string name="tile_label">Record</string>
+    <string name="tile_idle">Tap to record</string>
+    <string name="notif_channel">Screen recording</string>
+    <string name="notif_preparing">Preparing recording</string>
+    <string name="notif_countdown">Recording starts in %d</string>
+    <string name="notif_recording">Recording screen</string>
+    <string name="notif_paused">Recording paused</string>
+    <string name="action_stop">Stop</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_resume">Resume</string>
+</resources>
