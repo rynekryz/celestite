@@ -51,9 +51,9 @@ fun RecordModal(
     val scope = rememberCoroutineScope()
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
-    fun hide() {
+    fun hide(onDone: () -> Unit = onDismiss) {
         scope.launch { sheetState.hide() }.invokeOnCompletion {
-            if (!sheetState.isVisible) onDismiss()
+            if (!sheetState.isVisible) onDone()
         }
     }
 
@@ -186,8 +186,7 @@ fun RecordModal(
             Button(
                 onClick = {
                     haptics.confirm()
-                    hide()
-                    onRecord()
+                    hide(onRecord)
                 },
                 modifier = Modifier
                     .fillMaxWidth()

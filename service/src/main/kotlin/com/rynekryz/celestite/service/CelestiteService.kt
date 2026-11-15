@@ -15,6 +15,7 @@ import android.os.Handler
 import android.os.IBinder
 import android.os.Looper
 import android.os.SystemClock
+import android.util.Log
 import androidx.core.app.NotificationCompat
 import com.rynekryz.celestite.core.datastore.CelestiteStoreHolder
 import com.rynekryz.celestite.core.model.AudioMode
@@ -42,6 +43,7 @@ class CelestiteService : Service() {
         private const val EXTRA_RESULT_DATA = "result_data"
         private const val CHANNEL_ID = "celestite_recording"
         private const val NOTIFICATION_ID = 1
+        private const val TAG = "Celestite"
 
         fun start(context: Context, resultCode: Int, resultData: Intent) {
             val intent = Intent(context, CelestiteService::class.java)
@@ -111,9 +113,11 @@ class CelestiteService : Service() {
                 it.registerCallback(projectionCallback, handler)
             } ?: error("No screen capture access")
         } catch (t: Throwable) {
+            Log.w(TAG, "projection failed", t)
             fail(t.message ?: "Screen capture was denied")
             return
         }
+        Log.d(TAG, "projection ok")
 
         countdownJob = scope.launch {
             val store = CelestiteStoreHolder.get(applicationContext)
@@ -171,6 +175,7 @@ class CelestiteService : Service() {
                 handler.post { floatingControls.show(withPause = supportsPause) }
             }
         } catch (t: Throwable) {
+            Log.w(TAG, "capture failed", t)
             fail(t.message ?: "Could not start recording")
         }
     }
@@ -223,6 +228,7 @@ class CelestiteService : Service() {
     }
 
     private fun fail(message: String) {
+        Log.w(TAG, "fail: $message")
         RecordingBus.post(RecordingState.Failed(message))
         scope.launch { stopRecording(markSaved = false) }
     }

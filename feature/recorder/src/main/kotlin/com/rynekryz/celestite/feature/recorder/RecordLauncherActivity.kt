@@ -22,8 +22,8 @@ class RecordLauncherActivity : ComponentActivity() {
     ) { result ->
         if (result.resultCode == Activity.RESULT_OK && result.data != null) {
             CelestiteService.start(this, result.resultCode, result.data!!)
-            finish()
         }
+        finish()
     }
 
     private val notificationLauncher = registerForActivityResult(
