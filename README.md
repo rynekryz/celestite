@@ -59,14 +59,6 @@
 
 ---
 
-## Download
-
-Grab the latest APK from the [Releases page](https://github.com/rynekryz/celestite/releases). Pick the build matching your device:
-
-| Variant | Use case |
-
----
-
 ## Getting Started
 
 ### Prerequisites
