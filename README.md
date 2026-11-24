@@ -23,7 +23,9 @@
   <a href="https://github.com/rynekryz/celestite/releases"><img src="assets/badges/getgithub.svg" alt="Get it on GitHub" height="56"/></a>
 </p>
 
----
+<div align="center">
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rynekryz/rynekryz/main/pixel-art/divider-dots-dark.svg"><img src="https://raw.githubusercontent.com/rynekryz/rynekryz/main/pixel-art/divider-dots-light.svg" width="100%" alt=""></picture>
+</div>
 
 ## Features
 
@@ -39,7 +41,9 @@
 - 100% offline, no tracking, no ads. Every recording stays on your phone
 - etc.
 
----
+<div align="center">
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rynekryz/rynekryz/main/pixel-art/divider-dots-dark.svg"><img src="https://raw.githubusercontent.com/rynekryz/rynekryz/main/pixel-art/divider-dots-light.svg" width="100%" alt=""></picture>
+</div>
 
 ## Technical Stack
 
@@ -51,7 +55,9 @@
 - **Language:** Kotlin
 - **Build:** Gradle (Kotlin DSL)
 
----
+<div align="center">
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rynekryz/rynekryz/main/pixel-art/divider-dots-dark.svg"><img src="https://raw.githubusercontent.com/rynekryz/rynekryz/main/pixel-art/divider-dots-light.svg" width="100%" alt=""></picture>
+</div>
 
 ## Building
 
@@ -64,7 +70,9 @@ You'll need Android Studio (latest stable), JDK 21, and SDK 37. Minimum is Andro
 ./gradlew assembleDebug
 ```
 
----
+<div align="center">
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rynekryz/rynekryz/main/pixel-art/divider-dots-dark.svg"><img src="https://raw.githubusercontent.com/rynekryz/rynekryz/main/pixel-art/divider-dots-light.svg" width="100%" alt=""></picture>
+</div>
 
 ## Project Structure
 
@@ -82,7 +90,9 @@ Celestite/
 └── service/
 ```
 
----
+<div align="center">
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rynekryz/rynekryz/main/pixel-art/divider-dots-dark.svg"><img src="https://raw.githubusercontent.com/rynekryz/rynekryz/main/pixel-art/divider-dots-light.svg" width="100%" alt=""></picture>
+</div>
 
 ## License
 
